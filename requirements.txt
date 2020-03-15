@@ -1,0 +1,10 @@
+SQLAlchemy
+apache-airflow
+boto3
+pandas==0.25.3
+psycopg2-binary
+flatten_json
+mysqlclient
+PyGithub
+ipdb
+awscli
