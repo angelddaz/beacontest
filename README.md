@@ -64,6 +64,10 @@ I had to manually add the logging database in a `~/.bashrc` file in order for lo
 S3 Logging is configured in `airflow.cfg` seemingly correctly, but I ran into a similar issue as the postgres database not being loaded by `airflow.cfg`.
 I did not find a manual override for this logging to execute on the given s3 connection so this aspect of the test did not execute correctly.
 
+### Tutorials and Links followed
+Local Postgres installation for airflow:
+https://medium.com/@taufiq_ibrahim/apache-airflow-installation-on-ubuntu-ddc087482c14
+
 ### Coding Style test
 I follow PEP8 standards which can be automatically implemented using the black command:
 `black filename.py`
