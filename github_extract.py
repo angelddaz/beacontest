@@ -31,11 +31,7 @@ class ExtractContributors(object):
             df.set_value(i, "id", user.id)
             df.set_value(i, "login", user.login)
             df.set_value(i, "name", user.name)
-
-            # added break because of rate limits
-            if i == 10:
-                break
-
+            
         csv_buffer = StringIO()
         df.to_csv(csv_buffer, index=False)
         s3_resource = boto3.resource("s3")
@@ -64,8 +60,6 @@ class ExtractOpenIssues(object):
         for i, issue in enumerate(issues, start=0):
             df.set_value(i, "title", issue.title)
             df.set_value(i, "number", issue.number)
-            if i == 10:
-                break
 
         csv_buffer = StringIO()
         df.to_csv(csv_buffer, index=False)
